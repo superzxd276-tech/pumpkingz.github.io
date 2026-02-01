@@ -97,20 +97,18 @@ body {
 
 .grid-proyectos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    grid-template-columns: 1fr; /* Una por fila para que luzcan */
+    gap: 40px; /* EL ESPACIO MÁGICO para que no se encimen */
+    padding: 20px;
 }
 
 .card {
-    background: rgba(37, 37, 37, 0.6); /* Transparencia */
-    border-radius: 20px;
+    background: rgba(20, 25, 40, 0.4);
+    border: 1px solid rgba(77, 148, 255, 0.15);
+    border-radius: 15px;
     overflow: hidden;
-    backdrop-filter: blur(12px); /* Efecto vidrio */
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    text-align: left;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
 }
 
 .card:hover {
@@ -137,29 +135,46 @@ body {
     color: #ffb347; 
 }
 
-.tags { margin: 15px 0; }
-
-.tags span {
-    background: rgba(255, 179, 71, 0.1); 
-    color: #ffb347;
-    padding: 5px 12px;
-    border-radius: 50px;
-    font-size: 11px;
-    font-weight: bold;
-    margin-right: 5px;
-    border: 1px solid rgba(255, 179, 71, 0.2);
+.tags {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.card-links a {
+.tags span {
+    background: rgba(77, 148, 255, 0.1);
+    color: #4d94ff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(77, 148, 255, 0.2);
+}
+
+.card-links {
+    display: flex;
+    flex-wrap: wrap; /* Si no caben, se bajan solitos */
+    gap: 15px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+}
+
+.card-links a, .status-tag {
+    font-family: 'MojanglesLocal', sans-serif;
+    font-size: 0.85rem;
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     transition: 0.3s;
 }
 
-.card-links a:hover { color: #ffb347; }
+.card-links a:hover {
+    color: #4d94ff;
+    transform: translateY(-2px);
+}
 
 /* Reproductor Adaptado al Naranja */
 .music-player-container {
@@ -373,3 +388,4 @@ footer { padding: 60px 40px; text-align: center; background: #111; border-top: 1
 .btn-wiki i {
     font-size: 1.1rem;
 }
+
