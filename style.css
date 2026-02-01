@@ -336,4 +336,40 @@ footer { padding: 60px 40px; text-align: center; background: #111; border-top: 1
     .personal-card {
         flex-direction: column;
     }
+
+}
+
+.btn-wiki {
+    font-family: 'MojanglesLocal', sans-serif;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(77, 148, 255, 0.3);
+    background: rgba(20, 25, 40, 0.6);
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+.btn-wiki:hover {
+    transform: translateY(-3px); /* Se levanta tantito */
+    box-shadow: 0 5px 15px rgba(77, 148, 255, 0.3);
+    border-color: #4d94ff;
+    background: rgba(77, 148, 255, 0.2);
+}
+
+/* Color específico para Discord */
+.btn-discord:hover {
+    background: rgba(88, 101, 242, 0.3);
+    border-color: #5865f2;
+}
+
+/* Iconos */
+.btn-wiki i {
+    font-size: 1.1rem;
 }
