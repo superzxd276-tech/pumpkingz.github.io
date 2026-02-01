@@ -389,3 +389,38 @@ footer { padding: 60px 40px; text-align: center; background: #111; border-top: 1
     font-size: 1.1rem;
 }
 
+/* Esto asegura que todos los contenedores "About" tengan el mismo ancho */
+.about-container {
+    max-width: 1000px; /* Ajusta este valor al ancho que prefieras */
+    margin: 0 auto;    /* Centra el contenedor */
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ajuste específico para la tarjeta personal si quieres que se vea como bloque */
+.personal-card {
+    background: rgba(255, 255, 255, 0.05); /* Un fondo ligero para diferenciarla */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    margin-bottom: 40px;
+    justify-content: center; /* Centra el contenido si no hay imagen */
+}
+
+.personal-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.info-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+
