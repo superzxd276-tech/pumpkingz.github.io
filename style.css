@@ -97,18 +97,20 @@ body {
 
 .grid-proyectos {
     display: grid;
-    grid-template-columns: 1fr; /* Una por fila para que luzcan */
-    gap: 40px; /* EL ESPACIO MÁGICO para que no se encimen */
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
 }
 
 .card {
-    background: rgba(20, 25, 40, 0.4);
-    border: 1px solid rgba(77, 148, 255, 0.15);
-    border-radius: 15px;
+    background: rgba(37, 37, 37, 0.6); /* Transparencia */
+    border-radius: 20px;
     overflow: hidden;
-    backdrop-filter: blur(10px);
-    transition: 0.3s ease;
+    backdrop-filter: blur(12px); /* Efecto vidrio */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-align: left;
 }
 
 .card:hover {
@@ -135,46 +137,29 @@ body {
     color: #ffb347; 
 }
 
-.tags {
-    margin: 15px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
+.tags { margin: 15px 0; }
 
 .tags span {
-    background: rgba(77, 148, 255, 0.1);
-    color: #4d94ff;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    border: 1px solid rgba(77, 148, 255, 0.2);
+    background: rgba(255, 179, 71, 0.1); 
+    color: #ffb347;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 5px;
+    border: 1px solid rgba(255, 179, 71, 0.2);
 }
 
-.card-links {
-    display: flex;
-    flex-wrap: wrap; /* Si no caben, se bajan solitos */
-    gap: 15px;
-    margin-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 15px;
-}
-
-.card-links a, .status-tag {
-    font-family: 'MojanglesLocal', sans-serif;
-    font-size: 0.85rem;
+.card-links a {
     color: #fff;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 15px;
     transition: 0.3s;
 }
 
-.card-links a:hover {
-    color: #4d94ff;
-    transform: translateY(-2px);
-}
+.card-links a:hover { color: #ffb347; }
 
 /* Reproductor Adaptado al Naranja */
 .music-player-container {
@@ -351,76 +336,4 @@ footer { padding: 60px 40px; text-align: center; background: #111; border-top: 1
     .personal-card {
         flex-direction: column;
     }
-
 }
-
-.btn-wiki {
-    font-family: 'MojanglesLocal', sans-serif;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(77, 148, 255, 0.3);
-    background: rgba(20, 25, 40, 0.6);
-    color: #fff;
-    cursor: pointer;
-}
-
-/* Efecto al pasar el mouse */
-.btn-wiki:hover {
-    transform: translateY(-3px); /* Se levanta tantito */
-    box-shadow: 0 5px 15px rgba(77, 148, 255, 0.3);
-    border-color: #4d94ff;
-    background: rgba(77, 148, 255, 0.2);
-}
-
-/* Color específico para Discord */
-.btn-discord:hover {
-    background: rgba(88, 101, 242, 0.3);
-    border-color: #5865f2;
-}
-
-/* Iconos */
-.btn-wiki i {
-    font-size: 1.1rem;
-}
-
-/* Esto asegura que todos los contenedores "About" tengan el mismo ancho */
-.about-container {
-    max-width: 1000px; /* Ajusta este valor al ancho que prefieras */
-    margin: 0 auto;    /* Centra el contenedor */
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Ajuste específico para la tarjeta personal si quieres que se vea como bloque */
-.personal-card {
-    background: rgba(255, 255, 255, 0.05); /* Un fondo ligero para diferenciarla */
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 20px;
-    margin-bottom: 40px;
-    justify-content: center; /* Centra el contenido si no hay imagen */
-}
-
-.personal-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.info-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px 15px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-}
-
-
